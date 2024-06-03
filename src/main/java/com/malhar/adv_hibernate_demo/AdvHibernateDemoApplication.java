@@ -154,12 +154,13 @@ public class AdvHibernateDemoApplication {
 				appDao.addStudentToCourse(student, courseId);
 			}
 
+			//TODO: This function is giving LazyInitException. Please look into it and gain learning
 			if(Integer.parseInt(instructionId) == 11) {
 				System.out.println("Enter Student Id for fetching courses");
 				int studentId = Integer.parseInt(sc.nextLine());
 
 				List<Course> courses = appDao.getAllCoursesOfAStudent(studentId);
-//				System.out.println(courses);
+				System.out.println(courses);
 			}
 
 			if(instructionId.equals("exit")) {
